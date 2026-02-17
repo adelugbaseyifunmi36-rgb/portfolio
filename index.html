@@ -142,32 +142,7 @@
       text-shadow: 0 0 12px var(--accent-glow);
     }
 
-    .contact-info {
-      background: var(--card-bg);
-      padding: 32px;
-      border-radius: 12px;
-      border: 1px solid var(--card-border);
-      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
-      max-width: 500px;
-      margin: 0 auto;
-      text-align: center;
-    }
 
-    .contact-info p {
-      margin: 16px 0;
-      font-size: 1.2rem;
-    }
-
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .contact-info a:hover {
-      text-decoration: underline;
-      text-shadow: 0 0 12px var(--accent-glow);
-    }
 
     /* ─── Starfield & Animation ─── */
     .starfield {
@@ -214,6 +189,75 @@
       background: #1e293b;
       opacity: 0.5;
     }
+    .contact-grid{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+    @media (min-width:700px) {
+      .contact-grid{
+        flex-direction: row;
+      }
+    }
+    .contact-info {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      /* max-width: 500px; */
+      flex: 1;
+      margin: 0 auto;
+      text-align: center;
+      height: fit-content;
+    }
+
+    .contact-info p {
+      margin: 16px 0;
+      font-size: 1.2rem;
+    }
+
+    .contact-info a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+      text-shadow: 0 0 12px var(--accent-glow);
+    }
+    .contact-form {
+      background: var(--card-bg);
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+      flex: 1;
+      margin: 0 auto;
+    }
+    .contact-form form{
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+    .contact-form input , .contact-form textarea{
+      padding:12px 18px;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text);
+      transition: all 0.3s;
+    }
+    .contact-form button{
+      padding:12px 18px;
+      border-radius: 6px;
+      /* border: 1px solid var(--card-border); */
+      background: var(--accent);
+      color: black;
+      transition: all 0.3s;
+    }
+
   </style>
 </head>
 <body data-theme="dark">
@@ -296,18 +340,37 @@
 
   <section id="contact">
     <h2>Contact Me</h2>
-    <div class="contact-info">
-      <p><strong>Adelugba Oluwaseyifunmi</strong></p>
-      <p>
-        <a href="mailto:adelugbaseyifunmi36@gmail.com">adelugbaseyifunmi36@gmail.com</a>
-      </p>
-      <p>
-        <a href="tel:+2349168285668">09168285668</a>
-      </p>
-      <p style="margin-top: 32px; font-size: 1.1rem; opacity: 0.9; font-weight: 400;">
-        Open to freelance projects, collaborations, and interesting opportunities. I'd be happy to hear from you.
-      </p>
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <p><strong>Adelugba Oluwaseyifunmi</strong></p>
+        <p>
+          <a href="mailto:adelugbaseyifunmi36@gmail.com">adelugbaseyifunmi36@gmail.com</a>
+        </p>
+        <p>
+          <a href="tel:+2349168285668">09168285668</a>
+        </p>
+        <p style="margin-top: 32px; font-size: 1.1rem; opacity: 0.9; font-weight: 400;">
+          Open to freelance projects, collaborations, and interesting opportunities. I'd be happy to hear from you.
+        </p>
+      </div>
+      <div class="contact-form">
+
+        <form
+        action="https://api.formdrop.co/f/4eiAgCHP" 
+        method="POST" >
+        <label for="name">Name</label>
+        <input type="text" name="name" placeholder="Seyifunmi" required />
+        <label for="email">Email</label>
+        <input type="email" name="email" placeholder="user@gmail.com" required />
+        <label for="phone">Phone No.</label>
+        <input type="number" name="phone" placeholder="0000000000" required />
+        <label for="message">Message</label>
+        <textarea name="message" placeholder="Your Message" rows="3" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
     </div>
+  </div>
   </section>
 
   <script>
