@@ -1,0 +1,3 @@
+I'm Adelugba Oluwaseyifunmi, a passionate frontend developer and creative coder from Lagos, Nigeria. Currently a Computer Science student at Babcock University. I love turning ideas into interactive, visually engaging web experiences using modern web technologies.
+When I'm not coding, I'm exploring design trends, listening to Afrobeats, or sketching new concepts.
+Open to freelance projects, collaborations, internships, or just interesting conversations!
